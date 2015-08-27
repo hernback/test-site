@@ -34,11 +34,16 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
    <!-- <script data-require="angular-route@*" data-semver="1.4.1" src="https://code.angularjs.org/1.4.1/angular-route.js"></script>-->
     
+    <!-- services -->
     <script src="/app.js"></script>
     <script src="/services/gravatarservice.js"></script>
     <script src="/services/githubservice.js"></script>
+    <script src="/services/igdbservice.js"></script>
+    
+    <!-- controllers -->
     <script src="/git/gitcontroller.js"></script>
     <script src="/steam/steamcontroller.js"></script>
+    
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -75,6 +80,9 @@
                      <li>
                         <a class="page-scroll" ui-sref="git">Github</a>
                     </li>
+                       <li>
+                        <a class="page-scroll" ui-sref="igdb">IGDB</a>
+                    </li>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -86,9 +94,9 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                   <!-- <div class="col-md-8 col-md-offset-2">-->
                         <div ui-view></div>
-                    </div>
+                   <!-- </div>-->
                 </div>
             </div>
         </div>

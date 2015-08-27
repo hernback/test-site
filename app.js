@@ -22,6 +22,11 @@
                url: '/git/',
             templateUrl: 'git/gitview.html',
             controller:'gitcontroller'
+        })
+          .state('igdb', {  
+               url: '/igdb/',
+            templateUrl: 'igdb/igdbview.html',
+            controller:'igdbcontroller'
         });
         
   });

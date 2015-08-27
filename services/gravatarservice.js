@@ -12,6 +12,6 @@
   
   var module = angular.module("hernbackApp");
 
-  module.factory("gravatar", gravatar);
+  module.factory("gravatar", gravatar); 
   
 }());

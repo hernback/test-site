@@ -1,26 +1,27 @@
 <div class="row">
-	<h1>Github!</h1>
-</div>
-
-<div class="row">
 	<div class="col-lg-6">
-		<div class="input-group">
-			<input type="text" ng-model="searchParameters" class="form-control" placeholder="Search for git user">
-			<span class="input-group-addon" ng-click="searchUser(searchParameters)" id="basic-addon2">Search</span>
-		</div>
-  	</div><!-- /.col-lg-6 -->
+    <div class="input-group">
+	  <input type="text" ng-model="searchParameters" class="form-control" placeholder="Search for git users.">
+      <span class="input-group-btn">
+        <button class="btn btn-default" ng-click="searchUser(searchParameters)" type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+
 </div>
-<br />
+<br /><br /><br /><br />
 <!-- search result -->
-<div class="row" ng-if="showSearchResult">
+<div class="row" ng-if="showSearchResult && !_.isUndefined(user)">
 	 <div class="col-lg-12">
 		  <div>
 			  <h2> {{user.login}}</h2>
 			  <ul class="list-group" style="color:black;">
 				<li class="list-group-item">Real name: {{user.name}}</li>
 				<li class="list-group-item">Created: {{user.created_at}}</li>
-				</ul>
+				<li><img ng-src="{{!_.isUndefined(user) && user.avatar_url}}"/></li>
+			   </ul>
 		  </div>
 	</div>
 </div>
 <!-- /search result -->
+
